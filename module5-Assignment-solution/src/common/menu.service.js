@@ -14,7 +14,7 @@ function MenuService($http, ApiPath) {
       return response.data;
     });
   };
-
+  
 
   service.getMenuItems = function (menu_item) {
     // var config = {};
@@ -22,7 +22,7 @@ function MenuService($http, ApiPath) {
     //   config.params = {'category': category};
     // }
 
-    return $http.get(ApiPath + '/menu_items/'+ menu_item + '.json')
+    return $http.get('https://coursera-jhu-default-rtdb.firebaseio.com/menu_items.json')
     .then(function success (response) {
       //console.log('response.data: ', response.data);
       //console.log('response: ', response);
